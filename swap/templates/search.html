@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} search {% endblock %}
+{% block navtitle %} search {% endblock %}
+{% block content %}
+<div id="searchbar">
+    <span class="label label-info">Filter Search</span>
+    <br />
+    <br />
+    <form action="/search" method="post">{% csrf_token %}
+        <table>
+        {{ form.as_table }}
+        </table>
+        <input type="submit" value="Search" />
+   </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="{{ STATIC_URL }}jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css" >
+    <title>seedbay | {% block title %}{% endblock %}</title>
+    <script type="text/javascript">
+      function ajaxLogin() {
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var token = $('input[name="csrfmiddlewaretoken"]').val();
+
+        $.post('/login', {'username': username, 'password': password, 'csrfmiddlewaretoken': token},
+            function(data) {
+              var login_failed = (data.indexOf('_login' + '_error') != -1); // not a great idea, but it works for now
+
+              $('#login').modal('hide');
+
+              if (login_failed) {
+                alert("Incorrect username or password."); 
+              } else {
+                $("#bnav").html(' <a class="btn" href="/my/profile"> <i class="icon-user"></i> <span>' +username+ '</span> </a> <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button> <ul class="dropdown-menu"> <li><a href="/my/profile">User Profile</a></li> <li><a href="/my/messages">Private Messages</a></li> <li><a href="/my/trades">Trade Requests <span style="color:red;">(1 new)</span></a></li> <li class="divider"></li> <li><a href="/logout">Log out</a></li> </ul>');
+              }
+            });
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/guide">How-to Guide</a></li>
+            <li><a href="/about">About Us</a></li>
+          </ul>
+          <form class="navbar-search">
+          </form>
+          <div id="bnav" class="btn-group pull-right">
+            {% if user.is_authenticated %}
+            <a class="btn" href="/my/profile">
+              <i class="icon-user"></i>
+              <span>{{ user }}</span>
+            </a>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/my/profile">User Profile</a></li>
+              <li><a href="/my/messages">Private Messages</a></li>
+              <li><a href="/my/trades">Trade Requests <span style="color:red;">(1 new)</span></a></li>
+              <li class="divider"></li>
+              <li><a href="/logout">Log out</a></li>
+            </ul>
+            {% else %}
+            <a class="btn" href="/register">Register</a>
+            <a class="btn" data-toggle="modal" href="#login">Login</a>
+            {% endif %}
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span1"></div>
+        <div id="contentarea" class="span10">
+          {% block content %}
+          {% endblock %}
+        </div>
+        <div class="span1"></div>
+ 	<div class="modal hide" id="login">
+          <form method="POST" onsubmit="return ajaxLogin();">
+	    <div class="modal-header">
+	      <button type="button" class="close" data-dismiss="modal">x</button>
+	      <h3>Login</h3>
+	    </div>
+	    <div class="modal-body">
+	      <p>
+		{% csrf_token %}
+		<table>
+		  <tr>
+                    <td><label class="label label-info">Username</label></td>
+                    <td><input id='username' type="text" /></td>
+		  </tr>
+		  <tr>
+                    <td><label class="label label-info">Password</label></td>
+                    <td><input id='password' type="password" /></td>
+		  </tr>
+		</table>
+	      </p>
+	    </div>
+	    <div class="modal-footer">
+	      <input type="submit" value="Login" class="btn btn-primary" />
+	    </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
+

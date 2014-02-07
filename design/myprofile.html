@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="static/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
+    <title>seedbay | edit profile</title>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="faq.html">How-to Guide</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+          <form class="navbar-search">
+          </form>
+          <div class="btn-group pull-right">
+            <button class="btn" href="myprofile.html">
+              <i class="icon-user"></i>
+              <span>Bruce Wayne</span>
+            </button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="myprofile.html">User Profile</a></li>
+              <li><a href="mymessages.html">Private Messages</a></li>
+              <li><a href="mytrades.html">Trade Requests <span style="color:red;">(1 new)</span></a></li>
+              <li class="divider"></li>
+              <li><a href="logout.html">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span1"></div>
+        <div id="contentarea" class="span10">
+          <h1 id="cheader">Account</h1>
+          <label class="label label-info">First Name</label>
+          <input type="text" placeholder="Bruce" />
+          <label class="label label-info">Last Name</label>
+          <input type="text" placeholder="Wayne" />
+          <label class="label label-info">Password</label>
+          <input type="password" placeholder="*******" />
+          <label class="label label-info">Email</label>
+          <input type="text" placeholder="batman@gmail.com" />
+          <h1 id="cheader">Personal</h1>
+          <label class="label label-info">Location</label>
+          <input type="text" placeholder="Gotham City" />
+          <label class="label label-info">Another Personal Attribute</label>
+          <input type="text" placeholder="Some default value" />
+          <h1 id="cheader">Seeds</h1>
+          <table class="table table-striped">
+            <thead><tr><th>Looking for</th></tr></thead>
+            <tbody>
+              <tr><td>Apple Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+              <tr><td>Radish Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+            </tbody>
+          </table>
+          <button class="btn btn-primary pull-right" href="#"><span>Add Seed</span></button>
+          <br />
+          <br />
+          <br />
+          <table class="table table-striped">
+            <thead><tr><th>Trading</th></tr></thead>
+            <tbody>
+              <tr><td>Asparagus Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+              <tr><td>Poppy Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+              <tr><td>Sunflower Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+            </tbody>
+          </table>
+          <button class="btn btn-primary pull-right" href="#"><span>Add Seed</span></button>
+          <br />
+          <br />
+          <br />
+          <h3>Additional Information</h3>
+          <textarea rows="10" class="input-xxlarge">Hey everyone! I'm most interested in apple seeds, but radish seeds are good as well! Thanks!</textarea>
+          <br />
+          <br />
+          <br />
+          <button class="btn btn-primary pull-right" href="#"><span>Save Changes</span></button>
+        </div>
+        <div class="span1"></div>
+      </div>
+    </div>
+  </body>
+</html>
+

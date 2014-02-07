@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="static/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
+    <title>seedbay | private messages</title>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="faq.html">How-to Guide</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+          <form class="navbar-search">
+          </form>
+          <div class="btn-group pull-right">
+            <button class="btn" href="myprofile.html">
+              <i class="icon-user"></i>
+              <span>Bruce Wayne</span>
+            </button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="myprofile.html">User Profile</a></li>
+              <li><a href="mymessages.html">Private Messages</a></li>
+              <li><a href="mytrades.html">Trade Requests <span style="color:red;">(1 new)</span></a></li>
+              <li class="divider"></li>
+              <li><a href="logout.html">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span1"></div>
+        <div id="contentarea" class="span10">
+          <h1 id="cheader">Private Messages</h1>
+          <div class="btn-group pull-right" data-toggle="buttons-radio">
+            <button class="btn active"><span>Received</span></button>
+            <button class="btn"><span>Sent</span></button>
+          </div>
+          <br />
+          <br />
+          <div class="post">
+            <p>Todo: Figure out appearance of Private Message listings (likely a Table with three columns - Title, Sender, Date).</p>
+          </div>
+        </div>
+        <div class="span1"></div>
+      </div>
+    </div>
+  </body>
+</html>
+

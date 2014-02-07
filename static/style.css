@@ -1,0 +1,44 @@
+body {
+  background-image: url("/static/images/background.jpg");
+}
+
+#searchbar {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#contentarea {
+  background-color: #FFFFFF;
+  padding-top: 60px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+.post {
+  padding-left: 10px;
+}
+
+#cheader {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+#toc {
+  padding-bottom: 15px;
+}
+
+#copyright {
+  padding-top: 30px;
+  text-align: center;
+  font-style: italic;
+}
+
+.searchresult {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.time {
+  font-size: 0.5em;
+}

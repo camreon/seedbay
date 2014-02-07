@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %} {% block navtitle %} Seed Info {% endblock %}{% endblock %}
+
+{% block content %}
+<div>
+    <h2>{{ seed_type }}</h2>
+    <dl>
+        <dt>
+            Name
+        </dt>
+        <dd>
+            {{ seed_type.name }}
+        </dd>
+        <dt>
+            Scientific Name
+        </dt>
+        <dd>
+            <em>{{ seed_type.sci_name }}</em>
+        </dd>
+        <dt>
+             Growing Region
+        </dt>
+        <dd>
+            {{ seed_type.region }}
+        </dd>
+        <dt>
+            Season
+        </dt>
+        <dd>
+            {{ seed_type.season_start }} - {{ seed_type.season_end }}
+        </dd>
+        <dt>
+            Special Requirements
+        </dt>
+        <dd>
+            {{ seed_type.spec_req }}
+        </dd>
+        <dt>
+            Growing Tips
+        </dt>
+        <dd>
+            {{ seed_type.tips }}
+        </dd>
+        <dt>
+            Harvesting Info
+        </dt>
+        <dd>
+            {{ seed_type.harvest_info }}
+        </dd>
+        <dt>
+            Description
+        </dt>
+        <dd>
+            {{ seed_type.description }}
+        </dd>
+        <dt>
+    </dl>
+    {% if seed_type.verified %}
+        <span class="label label-success" rel="tooltip" title="first tooltip">Verified</span>
+    {% else %}
+        <span class="label label-important">Unverified</span>
+    {% endif %}    
+    {% if seed_type.gmo_flag %}
+        <span class="label label-warning">GMO</span>
+    {% else %}
+        {% if seed_type.gmo_flag == None %}
+            <span class="label">Unknown</span>
+        {% else %}
+            <span class="label label-success">NON-GMO</span>
+        {% endif %}
+    {% endif %}    
+    
+</div>
+{% endblock %}

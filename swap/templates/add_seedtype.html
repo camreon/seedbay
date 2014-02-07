@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <p>
+    <form action="/add/seedtype" method="post">{% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit" />
+        <input name="cancel" type="submit" value="Cancel" />
+    </form>
+    </p>
+
+{% endblock %}

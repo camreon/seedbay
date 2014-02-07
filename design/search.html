@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="static/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
+    <title>seedbay | search</title>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="homepage.html">Home</a></li>
+            <li class="active"><a href="search.html">Search</a></li>
+            <li><a href="faq.html">How-to Guide</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+          <form class="navbar-search">
+          </form>
+          <div class="btn-group pull-right">
+            <button class="btn" href="myprofile.html">
+              <i class="icon-user"></i>
+              <span>Bruce Wayne</span>
+            </button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="myprofile.html">User Profile</a></li>
+              <li><a href="mymessages.html">Private Messages</a></li>
+              <li><a href="mytrades.html">Trade Requests <span style="color:red;">(1 new)</span></a></li>
+              <li class="divider"></li>
+              <li><a href="logout.html">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span1"></div>
+        <div id="contentarea" class="span10">
+          <div id="searchbar">
+            <span class="label label-info">Filter Search</span>
+            <br />
+            <br />
+            <input type="text" class="search-query" placeholder="Common Name" />
+            <input type="text" class="search-query" placeholder="Scientific Name" />
+            <input type="text" class="search-query" placeholder="Hardiness Zone" />
+          </div>
+          <h1 id="cheader">Most Recent Updates</h1>
+          <div class="post">
+            <h2>
+              <a href="farmer/134/profile">Jane Doe</a>
+              <span class="time">(5 minutes ago)</span>
+            </h2>
+            <table class="table table-striped">
+              <thead><tr><th>Looking for</th></tr></thead>
+              <tbody>
+                <tr><td>Pumpkin Seeds</td></tr>
+                <tr><td>Poppy Seeds</td></tr>
+                <tr><td>Radish Seeds</td></tr>
+              </tbody>
+            </table>
+            <table class="table table-striped">
+              <thead><tr><th>Trading</th></tr></thead>
+              <tbody>
+                <tr><td>Asparagus Seeds</td></tr>
+                <tr><td>Sunflower Seeds</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="post">
+            <h2>
+              <a href="farmer/30/profile">Johnny Appleseed</a>
+              <span class="time">(10 hours ago)</span>
+            </h2>
+            <table class="table table-striped">
+              <thead><tr><th>Looking for</th></tr></thead>
+                <tr><td>Sunflower Seeds</td></tr>
+              <tbody>
+              </tbody>
+            </table>
+            <table class="table table-striped">
+              <thead><tr><th>Trading</th></tr></thead>
+              <tbody>
+                <tr><td>Apple Seeds</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="span1"></div>
+      </div>
+    </div>
+  </body>
+</html>
+

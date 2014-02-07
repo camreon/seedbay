@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %} search {% endblock %}
+{% block navtitle %} search {% endblock %}
+{% block content %}
+
+{{ name }}
+{{ sci_name }}
+{{ region }}
+<br />
+<h1 id="cheader">Most Recent Updates</h1>
+{% for user,items in results %}
+
+    <div class="post">
+        <h2>
+            <a href="#">{{ user }}</a>
+            <span class="time">(5 minutes ago)</span>
+        </h2>
+        <table class="table table-striped">
+            <thead><tr><th>Looking for</th></tr></thead>
+            <tbody>
+                <tr><td>Pumpkin Seeds</td></tr>
+                <tr><td>Poppy Seeds</td></tr>
+                <tr><td>Radish Seeds</td></tr>
+            </tbody>
+        </table>
+        <table class="table table-striped">
+            <thead><tr><th>Trading</th></tr></thead>
+            <tbody>
+                {% for seed in items %}
+                    <tr><td>{{ seed.kind }}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="cheader">Login</h1>
+    {% if form.errors %}
+        <p class="_login_error" style="color:red">Your username or password is not correct. Please try again.</p>
+    {% endif %}
+    
+        {% if login_failed %}
+            <p class="_login_error" style="color:red"> You might have entered the wrong password! </p>
+        {% endif %}
+    <p>
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+            </table>
+            <input type="submit" value="login" />
+        </form>
+    </p>
+
+{% endblock %}

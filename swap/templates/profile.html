@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %} {{ user }} {% endblock %}
+{% block navtitle %} edit profile {% endblock %}
+{% block content %}
+
+See your seeds <a href="/farmers/{{user.id}}/seeds">here!</a><br /> 
+Add a seed to your inventory <a href="/add/item">here!</a><br />
+Add a seedtype to our database <a href="/add/seedtype">here!</a><br /><br />
+
+<h1 id="cheader">Account</h1>
+<label class="label label-info">Full Name</label>
+<input type="text" placeholder="{{ profile.fullname }}" />
+<label class="label label-info">Password</label>
+<input type="password" placeholder="*******" />
+<label class="label label-info">Email</label>
+<input type="text" placeholder="{{ user.email }}" />
+<h1 id="cheader">Personal</h1>
+<label class="label label-info">Address</label>
+<input type="text" placeholder="{{ profile.address }}" />
+<label class="label label-info">Region</label>
+<input type="text" placeholder="{{ profile.region }}" />
+<label class="label label-info">Interests</label>
+<input type="text" placeholder="{{ profile.interests }}" />
+<!--
+<h1 id="cheader">Seeds</h1>
+<table class="table table-striped">
+  <thead><tr><th>Looking for</th></tr></thead>
+  <tbody>
+    <tr><td>Apple Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+    <tr><td>Radish Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+  </tbody>
+</table>
+<button class="btn btn-primary pull-right" href="#"><span>Add Seed</span></button>
+<br />
+<br />
+<br />
+<table class="table table-striped">
+  <thead><tr><th>Trading</th></tr></thead>
+  <tbody>
+    <tr><td>Asparagus Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+    <tr><td>Poppy Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+    <tr><td>Sunflower Seeds</td><td><button class="btn btn-danger pull-right" href="#"><span>Remove Seed</span></button></td></tr>
+  </tbody>
+</table>
+<button class="btn btn-primary pull-right" href="#"><span>Add Seed</span></button>
+<br />
+<br />
+<br />
+-->
+<h3>Additional Information</h3>
+<textarea rows="10" class="input-xxlarge"></textarea>
+<br />
+<br />
+<br />
+<button class="btn btn-primary pull-right" href="#"><span>Save Changes</span></button>
+{% endblock %}
