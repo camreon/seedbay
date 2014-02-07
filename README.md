@@ -1,4 +1,4 @@
-seedbay (for CS 2340 - Objects and Design)
+seedbay (CS 2340 - Objects and Design)
 =======
 
 WIP web application to facilitate trading seeds using an eBay-style exchange system.
