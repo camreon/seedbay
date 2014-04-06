@@ -1,8 +1,9 @@
 ##SeedBay (CS 2340 - Objects and Design)
-###by Cameron Guthrie, Bill Dorn, Stephen Whipple, John Schaberg
+###Cameron Guthrie, Bill Dorn, Stephen Whipple, John Schaberg
 
 WIP web application to facilitate trading seeds using an eBay-style exchange system.
 Built with the Django web framework (Python), jQuery 1.7.2, Bootstrap, and SQLite.
+
 --
 
 ###How to use: 
@@ -19,3 +20,10 @@ python manage.py runserver
 ```
 
 Navigate to localhost:8000 in a browser to view.
+
+###Screenshots
+![Alt text](/home.png "Home")
+![Alt text](/search.png "Search")
+![Alt text](/guide.png "Guide")
+
+
